@@ -67,7 +67,7 @@ router.post('/login', (req, res, next) => {
                         position: user.position,
                         unitskpd: user.unitskpd,
                         statusemployee: user.statusemployee,
-                        position: user.position,
+                        positon: user.position,
                     }
                 })
             } else {
