@@ -58,3 +58,14 @@ module.exports.addEmployee = function(newEmployee, callback) {
         })
     })
 }
+module.exports.getUserByEmail = function(email, callback) {
+    const query = { email: email }
+    User.findOne(query, callback);
+}
+
+module.exports.comparePassword = function(candidatePassword, hash, callback) {
+    bcrypt.compare(candidatePassword, hash, (err, isMatch) => {
+        if (err) throw err;
+        callback(null, isMatch);
+    })
+}
