@@ -26,9 +26,9 @@ app.use(passport.session());
 app.use(express.static(__dirname + '/public'));
 require('./config/passport')(passport);
 
-app.use('/api/master/heroku createemployee', employees);
+app.use('/api/master/employee', employees);
 app.get('/', (req, res) => {
-    res.sendfile('/public/index.html');
+    res.sendfile(__dirname + '/public/index.html');
 });
 
 // Start server
