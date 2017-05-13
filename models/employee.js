@@ -60,7 +60,7 @@ module.exports.addEmployee = function(newEmployee, callback) {
 }
 module.exports.getUserByEmail = function(email, callback) {
     const query = { email: email }
-    User.findOne(query, callback);
+    Employee.findOne(query, callback);
 }
 
 module.exports.comparePassword = function(candidatePassword, hash, callback) {

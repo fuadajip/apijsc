@@ -53,7 +53,7 @@ router.post('/login', (req, res, next) => {
         Employee.comparePassword(password, user.password, (err, isMatch) => {
             if (err) throw err;
             if (isMatch) {
-                const token = jwt.sign(user, config.secret, {
+                const token = jwt.sign(user, Config.secret, {
                     expiresIn: 21600 // 6 hours
                 });
 
