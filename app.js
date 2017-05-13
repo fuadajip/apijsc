@@ -17,7 +17,7 @@ mongoose.connection.on('error', (err) => {
 
 const employees = require('./routes/employees');
 const app = express();
-const port = process.env.PORT || 3010;
+const port = process.env.PORT || 8888;
 
 app.use(cors());
 app.use(bodyParser.json());
