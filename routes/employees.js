@@ -36,7 +36,10 @@ router.post('/register', (req, res, next) => {
 });
 
 
-// Authenticate
+// Authenticate Login
+router.get('/login', (req, res) => {
+    res.send("Invalid method");
+});
 router.post('/login', (req, res, next) => {
     const email = req.body.email;
     const password = req.body.password;
