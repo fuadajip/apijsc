@@ -16,6 +16,9 @@ mongoose.connection.on('error', (err) => {
 });
 
 const employees = require('./routes/employees');
+const surveys = require('./routes/listsurveys');
+
+
 const app = express();
 const port = process.env.PORT || 3010;
 
@@ -27,6 +30,8 @@ app.use(express.static(__dirname + '/public'));
 require('./config/passport')(passport);
 
 app.use('/api/master/employee', employees);
+app.use('/api/master/survey', surveys);
+
 app.get('/', (req, res) => {
     res.sendfile(__dirname + '/public/index.html');
 });
