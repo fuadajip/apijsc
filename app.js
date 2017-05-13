@@ -17,7 +17,7 @@ mongoose.connection.on('error', (err) => {
 
 const employees = require('./routes/employees');
 const app = express();
-const port = 3010;
+const port = process.env.PORT || 3010;
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -26,7 +26,7 @@ app.use(passport.session());
 app.use(express.static(__dirname + '/public'));
 require('./config/passport')(passport);
 
-app.use('/api/master/employee', employees);
+app.use('/api/master/heroku createemployee', employees);
 app.get('/', (req, res) => {
     res.sendfile(__dirname + '/public/index.html');
 });
