@@ -17,7 +17,7 @@ mongoose.connection.on('error', (err) => {
 
 const employees = require('./routes/employees');
 const surveys = require('./routes/listsurveys');
-
+const forms = require('./routes/forms');
 
 const app = express();
 const port = process.env.PORT || 3010;
@@ -31,6 +31,8 @@ require('./config/passport')(passport);
 
 app.use('/api/master/employee', employees);
 app.use('/api/master/survey', surveys);
+app.use('/api/master/form', forms);
+
 
 app.get('/', (req, res) => {
     res.sendfile(__dirname + '/public/index.html');
