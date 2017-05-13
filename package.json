@@ -4,7 +4,7 @@
     "description": "Api Survey Form JSC",
     "main": "app.js",
     "scripts": {
-        "test": "node app"
+        "test": "node app.js"
     },
     "repository": {
         "type": "git",
