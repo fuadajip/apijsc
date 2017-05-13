@@ -28,7 +28,7 @@ require('./config/passport')(passport);
 
 app.use('/api/master/heroku createemployee', employees);
 app.get('/', (req, res) => {
-    res.sendfile(__dirname + '/public/index.html');
+    res.sendfile('/public/index.html');
 });
 
 // Start server
