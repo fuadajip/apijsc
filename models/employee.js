@@ -29,7 +29,7 @@ const EmployeeSchema = mongoose.Schema({
         required: true,
     },
     birthdate: {
-        type: Date,
+        type: String,
     },
     address: {
         type: String,
@@ -41,6 +41,7 @@ const EmployeeSchema = mongoose.Schema({
     },
     edited: {
         type: Date,
+        default: Date.now
     },
     statusemployee: {
         type: String,
