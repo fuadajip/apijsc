@@ -17,7 +17,7 @@ router.post('/submit', (req, res, next) => {
         idlistsurvey: req.body.idlistsurvey,
         title: req.body.title,
         values: req.body.values,
-        createdby: req.body.createdby,
+        surveyor: req.body.surveyor,
         created: req.body.created,
         edited: req.body.edited,
     });

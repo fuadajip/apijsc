@@ -5,7 +5,7 @@ const config = require('../config/database');
 const formStructureSchema = mongoose.Schema({
     idlistsurvey: { type: String },
     title: { type: String },
-    surveyor: { type: String },
+    createdby: { type: String },
     fields: [],
     created: { type: Date },
     edited: { type: Date },

@@ -17,6 +17,7 @@ router.post('/addform', (req, res, next) => {
         idlistsurvey: req.body.idlistsurvey,
         title: req.body.title,
         fields: req.body.fields,
+        createdby: req.body.createdby,
         created: req.body.created,
         edited: req.body.edited,
     });
