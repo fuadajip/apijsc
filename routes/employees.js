@@ -11,7 +11,7 @@ router.get('/', (req, res, next) => {
     })
     // Authenticate Login
 router.get('/getemployee', (req, res, next) => {
-    db.employee.find(function(err, datae) {
+    db.employees.find(function(err, datae) {
         if (err) {
             res.json({ success: false, msg: 'False' });
         } else {
