@@ -19,11 +19,17 @@ router.post('/listsurvey', (req, res) => {
         if (err) throw err;
         if (!listsurvey) {
             return res.json({ success: false, msg: 'Doesn\'t have survey form' });
-        } else {
+        }
+        if (listsurvey.length != 0) {
             console.log(listsurvey);
             res.json({
                 success: true,
                 listsurvey
+            })
+        } else {
+            res.json({
+                success: false,
+                msg: 'Data tidak Ditemukan'
             })
         }
     })
