@@ -7,8 +7,8 @@ const formSubmissionSchema = mongoose.Schema({
     title: { type: String },
     surveyor: { type: String },
     values: [],
-    created: { type: Date },
-    edited: { type: Date },
+    created: { type: Date, default: Date.now },
+    edited: { type: Date, default: Date.now },
 })
 
 const FormSubmission = module.exports = mongoose.model('FormSubmission', formSubmissionSchema);

@@ -19,7 +19,7 @@ router.post('/submit', (req, res, next) => {
         values: req.body.values,
         surveyor: req.body.surveyor,
         created: req.body.created,
-        edited: req.body.edited,
+        edited: req.body.edited
     });
     // console.log(addForm);
     FormSubmission.addSubmissionForm(submissionDataForm, (err, data) => {
