@@ -11,11 +11,10 @@ router.get('/', (req, res, next) => {
     })
     // Authenticate Login
 router.get('/getemployee', (req, res, next) => {
-    Employee.find(function(err, bears) {
+    Employee.find(function(err, dataEmployee) {
         if (err)
             res.send(err);
-
-        res.json(bears);
+        res.json(dataEmployee);
     });
 
 });
