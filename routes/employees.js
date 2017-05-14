@@ -11,13 +11,13 @@ router.get('/', (req, res, next) => {
     })
     // Authenticate Login
 router.get('/getemployee', (req, res, next) => {
-    Config.database.employees.find(function(err, datae) {
-        if (err) {
-            res.json({ success: false, msg: 'False' });
-        } else {
-            res.json({ success: true, data: datae });
-        }
-    })
+    Employee.find(function(err, bears) {
+        if (err)
+            res.send(err);
+
+        res.json(bears);
+    });
+
 });
 //Regiter the route
 router.post('/register', (req, res, next) => {

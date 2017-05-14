@@ -61,6 +61,7 @@ module.exports.getUserByEmail = function(email, callback) {
     Employee.findOne(query, callback);
 }
 
+
 module.exports.comparePassword = function(candidatePassword, hash, callback) {
     bcrypt.compare(candidatePassword, hash, (err, isMatch) => {
         if (err) throw err;
