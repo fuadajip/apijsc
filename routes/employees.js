@@ -19,7 +19,6 @@ router.post('/register', (req, res, next) => {
         position: req.body.position,
         unitskpd: req.body.unitskpd,
         phone: req.body.phone,
-        birthdate: req.body.birthdate,
         address: req.body.address,
         created: req.body.created,
         edited: req.body.edited,

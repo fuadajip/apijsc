@@ -28,9 +28,6 @@ const EmployeeSchema = mongoose.Schema({
         type: String,
         required: true,
     },
-    birthdate: {
-        type: String,
-    },
     address: {
         type: String,
         required: true
