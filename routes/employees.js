@@ -7,9 +7,18 @@ const Employee = require('../models/employee');
 const Config = require('../config/database');
 
 router.get('/', (req, res, next) => {
-    res.send('Invalid Endpoint');
-})
-
+        res.send('Invalid Endpoint');
+    })
+    // Authenticate Login
+router.get('/employee', (req, res, next) => {
+    db.employee.find(function(err, datae) {
+        if (err) {
+            res.json({ success: false, msg: 'False' });
+        } else {
+            res.json({ success: true, data: datae });
+        }
+    })
+});
 //Regiter the route
 router.post('/register', (req, res, next) => {
     let newEmployee = new Employee({
