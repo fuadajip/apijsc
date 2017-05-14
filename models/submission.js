@@ -5,8 +5,8 @@ const config = require('../config/database');
 const formSubmissionSchema = mongoose.Schema({
     idlistsurvey: { type: String },
     title: { type: String },
-    values: [],
     createdby: { type: String },
+    values: [],
     created: { type: Date },
     edited: { type: Date },
 })
