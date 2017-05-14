@@ -22,8 +22,8 @@ router.post('/listsurvey', (req, res) => {
         } else {
             console.log(listsurvey);
             res.json({
-                success: true,
-                listsurvey
+                success: false,
+                msg: "Nothing to Display"
             })
         }
     })
