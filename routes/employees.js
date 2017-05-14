@@ -10,7 +10,7 @@ router.get('/', (req, res, next) => {
         res.send('Invalid Endpoint');
     })
     // Authenticate Login
-router.get('/employee', (req, res, next) => {
+router.get('/getemployee', (req, res, next) => {
     db.employee.find(function(err, datae) {
         if (err) {
             res.json({ success: false, msg: 'False' });
