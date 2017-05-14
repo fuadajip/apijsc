@@ -33,6 +33,7 @@ router.post('/addsurvey', (req, res, next) => {
     let addSurvey = new ListSurvey({
         unitskpd: req.body.unitskpd,
         title: req.body.title,
+        createdby: req.body.createdby,
         created: req.body.created,
         edited: req.body.edited,
     });

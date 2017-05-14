@@ -6,6 +6,7 @@ const listsurveySchema = mongoose.Schema({
     unitskpd: { type: String },
     title: { type: String },
     created: { type: Date },
+    createdby: { type: String },
     edited: { type: Date },
 })
 
