@@ -10,13 +10,16 @@ const listsurveySchema = mongoose.Schema({
     edited: { type: Date },
 })
 
-const ListSurvey = module.exports = mongoose.model('ListSurvey', listsurveySchema);
+const ListSurvey = mongoose.model('ListSurvey', listsurveySchema);
 
-module.exports.addListSurvey = function(newListSurvey, callback) {
-    newListSurvey.save(callback);
+const survey = {
+    addListSurvey: function(newListSurvey, callback) {
+        newListSurvey.save(callback);
+    },
+    getListSurveyByUnitSKPD: function(unitskpd, callback) {
+        const query = { unitskpd: unitskpd }
+        ListSurvey.find(query, callback);
+    }
 }
 
-module.exports.getListSurveyByUnitSKPD = function(unitskpd, callback) {
-    const query = { unitskpd: unitskpd }
-    ListSurvey.find(query, callback);
-}
+module.exports = survey;
