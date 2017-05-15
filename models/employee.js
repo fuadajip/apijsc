@@ -56,6 +56,11 @@ module.exports.addEmployee = function(newEmployee, callback) {
         })
     })
 }
+
+module.exports.deleteEmployee = function(id, callback) {
+    const query = { _id: id }
+    Employee.findOneAndRemove(query, callback);
+}
 module.exports.getUserByEmail = function(email, callback) {
     const query = { email: email }
     Employee.findOne(query, callback);

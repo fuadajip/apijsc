@@ -42,6 +42,26 @@ router.post('/register', (req, res, next) => {
     });
 });
 
+router.delete('/delete/:id', (req, res, next) => {
+    const id = req.params.id;
+    // if (id) {
+    //     return res.json({ success: true, msg: id });
+    // } else {
+    //     return res.json({ success: false, msg: 'Gagal' });
+    // }
+    Employee.deleteEmployee(id, (err, user) => {
+        if (err) throw err;
+        if (!user) {
+            return res.json({ success: false, msg: 'User not found' });
+        }
+        if (user.length != 0) {
+            res.json({
+                success: true,
+                msg: 'Berhasil Menghapus Pegawai'
+            })
+        }
+    })
+})
 
 // Authenticate Login
 router.get('/login', (req, res) => {
@@ -83,5 +103,6 @@ router.post('/login', (req, res, next) => {
         })
     })
 });
+
 
 module.exports = router;
